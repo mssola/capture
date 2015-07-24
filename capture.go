@@ -2,6 +2,7 @@
 // This file is licensed under the MIT license.
 // See the LICENSE file.
 
+// Package capture safely captures the stdout and stderr of some given code.
 package capture
 
 import (
