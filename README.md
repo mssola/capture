@@ -1,4 +1,9 @@
-# capture [![Build Status](https://travis-ci.org/mssola/capture.svg?branch=master)](https://travis-ci.org/mssola/capture) [![GoDoc](https://godoc.org/github.com/mssola/capture?status.png)](http://godoc.org/github.com/mssola/capture)
+<p align="center">
+  <a href="https://github.com/mssola/capture/actions?query=workflow%3ACI" title="CI status for the main branch"><img src="https://github.com/mssola/capture/workflows/CI/badge.svg" alt="Build Status for main branch" /></a>
+  <a href="https://pkg.go.dev/github.com/mssola/capture" rel="nofollow"><img alt="GoDoc" src="https://pkg.go.dev/badge/github.com/mssola/capture" style="max-width:100%;"></a>
+</p>
+
+---
 
 This is a super simple package that basically allows you to capture the output
 from os.Stdout and os.Stderr in a safe and clean manner. This is how you should
@@ -34,4 +39,4 @@ func main() {
 }
 ```
 
-Copyright &copy; 2015-2018 Miquel Sabaté Solà, released under the MIT License.
+Copyright &copy; 2015-2022 Miquel Sabaté Solà, released under the MIT License.

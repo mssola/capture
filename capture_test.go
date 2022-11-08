@@ -1,4 +1,4 @@
-// Copyright (C) 2015-2018 Miquel Sabaté Solà <mikisabate@gmail.com>
+// Copyright (C) 2015-2022 Miquel Sabaté Solà <mikisabate@gmail.com>
 // This file is licensed under the MIT license.
 // See the LICENSE file.
 
@@ -40,7 +40,7 @@ func TestCapture(t *testing.T) {
 	}
 }
 
-func ExampleCapture() {
+func ExampleAll() {
 	res := All(func() { panic("Told ya!") })
 	fmt.Printf("%v\n", res.Error)
 
