@@ -24,7 +24,7 @@ couple of notes on reports:
 
 - Write a [good commit message](https://chris.beams.io/posts/git-commit/).
 - Run the tests.
-- Update the [[./CHANGELOG.md][changelog]] (if relevant).
+- Update the [changelog](./CHANGELOG.md) (if relevant).
 - Open a pull request with *only* one subject and a clear title and description.
   Refrain from submitting pull requests with tons of different unrelated
   commits.
