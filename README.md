@@ -39,4 +39,4 @@ func main() {
 }
 ```
 
-Copyright &copy; 2015-2022 Miquel Sabaté Solà, released under the MIT License.
+Copyright &copy; 2015-2023 Miquel Sabaté Solà, released under the MIT License.
