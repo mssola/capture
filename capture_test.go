@@ -1,7 +1,3 @@
-// Copyright (C) 2015-2023 Miquel Sabaté Solà <mikisabate@gmail.com>
-// This file is licensed under the MIT license.
-// See the LICENSE file.
-
 package capture
 
 import (

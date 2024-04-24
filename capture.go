@@ -1,13 +1,8 @@
-// Copyright (C) 2015-2023 Miquel Sabaté Solà <mikisabate@gmail.com>
-// This file is licensed under the MIT license.
-// See the LICENSE file.
-
 // Package capture safely captures the stdout and stderr of some given code.
 package capture
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
 )
 
@@ -33,8 +28,8 @@ func cleanup(files ...*os.File) {
 
 // Setup the mocking files for the stdout and the stderr.
 func setupFiles() (*os.File, *os.File) {
-	outFile, _ := ioutil.TempFile("", "outputmock")
-	errFile, _ := ioutil.TempFile("", "errormock")
+	outFile, _ := os.CreateTemp("", "outputmock")
+	errFile, _ := os.CreateTemp("", "errormock")
 	return outFile, errFile
 }
 
@@ -62,7 +57,7 @@ func All(f func()) (captured *Result) {
 	oldStdout, oldStderr = os.Stdout, os.Stderr
 	os.Stdout, os.Stderr = outFile, errFile
 	f()
-	captured.Stdout, _ = ioutil.ReadFile(outFile.Name())
-	captured.Stderr, _ = ioutil.ReadFile(errFile.Name())
+	captured.Stdout, _ = os.ReadFile(outFile.Name())
+	captured.Stderr, _ = os.ReadFile(errFile.Name())
 	return captured
 }
