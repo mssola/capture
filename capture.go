@@ -52,7 +52,7 @@ func All(f func()) (captured *Result) {
 	// has been created inside this function.
 	defer func() {
 		if r := recover(); r != nil {
-			captured.Error = fmt.Errorf("Panic: %v", r)
+			captured.Error = fmt.Errorf("panic: %v", r)
 		}
 		cleanup(outFile, errFile)
 		os.Stdout, os.Stderr = oldStdout, oldStderr

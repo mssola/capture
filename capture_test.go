@@ -18,7 +18,7 @@ func TestCapturePanic(t *testing.T) {
 	if res.Stderr != nil {
 		t.Fatal("Wrong value for stdout")
 	}
-	if res.Error.Error() != "Panic: Panic!" {
+	if res.Error.Error() != "panic: Panic!" {
 		t.Fatal("Wrong error")
 	}
 }
@@ -51,6 +51,6 @@ func ExampleAll() {
 	fmt.Printf("%s %s\n", res.Stdout, res.Stderr)
 
 	// Output:
-	// Panic: Told ya!
+	// panic: Told ya!
 	// Hello World
 }
